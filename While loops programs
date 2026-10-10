@@ -1,0 +1,24 @@
+Q1Given a number N, print its factors.
+Input Description:
+Input Size : n<=1000
+Sample Input:
+6
+Sample Output:
+1 2 3 6
+sol
+
+#include <stdio.h>
+int main() {
+    int n, i = 1;
+    if (scanf("%d", &n) != 1) {
+        return 0;
+    }
+    while (i <= n) {
+        if (n % i == 0) {
+            printf("%d ", i);
+        }
+        i++;
+    }
+    print("\n");
+    return 0;
+}
