@@ -1,0 +1,23 @@
+Q)wap to take input from the user and print the odd digits in a number.also written -1 if number is 0
+sol)
+#include <stdio.h>
+int main() {
+    int N, temp, digit;
+    int arr[10], count = 0;
+    scanf("%d", &N);
+    temp = N;
+    for (; temp > 0; temp /= 10) {
+        digit = temp % 10;
+        if (digit % 2 != 0) {
+            arr[count++] = digit;
+        }
+    }
+    if (count == 0) {
+        printf("-1");
+    } else {
+        for (int i = count - 1; i >= 0; i--) {
+            printf("%d ", arr[i]);
+        }
+    }
+    return 0;
+}
