@@ -1,0 +1,113 @@
+Q1) wap to insert 10 integers into an array given by the users
+
+#include <stdio.h>
+
+int main() {
+    int i, arr[10];
+    for (i = 0; i < 10; i++) {
+        printf("Enter element %d: ", i);
+        scanf("%d", &arr[i]);
+    }
+    printf("\nThe array elements are: ");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+   
+    return 0;
+}
+Q2)wap to print the sum of all the elements of array
+
+#include <stdio.h>
+int main()
+{
+    int i, arr[5],sum = 0;
+    printf("Enter the elements for the array:\n");
+    scanf("%d",&arr[i]);
+   
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+   
+    for(i = 0; i < 5; i++) {
+        sum = sum + arr[i];
+    }
+    printf("sum of all the elements in the array is %d\n",sum);
+    return 0;
+}
+
+Q3)wap to count the number of even and odd number in an array
+
+#include <stdio.h>
+int main()
+{
+    int arr[10],i,eve=0,odd=0;
+    for(i=0;i<10;i++){
+        printf("enter the %d element of an array:",i);
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<10;i++){
+        if(i%2==0){
+            eve=eve+1;
+        }
+        else{
+            odd=odd+1;
+        }
+    }
+    printf("there are %d even numbers in array\n",eve);
+    printf("there are %d odd numbers in array\n",odd);
+    return 0;
+}
+Q4)wap to copy the elements of an array to another array
+#include <stdio.h>
+
+int main() {
+    int arr[10], i, arrr[10];
+
+    for(i = 0; i < 10; i++) {
+        printf("Enter element %d of the array: ", i);
+        scanf("%d", &arr[i]);
+    }
+
+    for(i = 0; i < 10; i++) {
+        arrr[i] = arr[i];
+    }
+    printf("The copied array is: ");
+    for(i = 0; i < 10; i++) {
+        printf("%d ", arrr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+Q5)wap to insert a new element at the beginning of the array.
+#include <stdio.h>
+int main() {
+    int n, i,m,position;
+    printf("enter size of array:");
+    scanf("%d",&n);
+    int arr[n];
+    for(i = 0; i < n; i++) {
+        printf("Enter element %d of the array: ", i);
+        scanf("%d", &arr[i]);
+    }
+    printf("the entered array is:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n enter new element to be inserted:");
+    scanf("%d",&m);
+    printf("enter postion to be inserted:");
+    scanf("%d",&position);
+    for(i=n;i>=position;i--)
+    {
+        arr[i] = arr[i-1];
+    }
+    arr[position-1] = m;
+    n++;
+    printf("the new array is:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
